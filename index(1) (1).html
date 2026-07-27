@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speak With Ease | The Workaholic Way</title>
+<style>
+:root{--bg:#f6f5f1;--card:#fff;--ink:#1d2522;--muted:#6d7772;--green:#285c4b;--pale:#e5efeb;--line:#dfe5e2;--sand:#f1e8d8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1050px;margin:auto;padding:18px}.hero{background:linear-gradient(135deg,#163b31,#39735f);color:#fff;border-radius:28px;padding:42px 30px;margin:8px 0 18px}.hero h1{font-size:clamp(38px,7vw,68px);line-height:.95;margin:10px 0}.hero p{max-width:700px;opacity:.9}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;margin:12px 0}.stat b{display:block;font-size:26px;color:var(--green)}
+input,textarea,select{width:100%;padding:11px;border:1px solid var(--line);border-radius:12px;font:inherit;background:#fff}textarea{min-height:90px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.progress{height:13px;background:#e7ebe9;border-radius:20px;overflow:hidden}.bar{height:100%;background:var(--green);width:0}.tabs{display:flex;gap:7px;overflow:auto;padding:5px 0}.tab,.btn{border:1px solid var(--line);border-radius:999px;padding:10px 14px;background:#fff;cursor:pointer;white-space:nowrap}.tab.active,.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}
+.day{border-top:1px solid var(--line);padding:18px 0}.day:first-of-type{border:0}.badge{display:inline-block;background:var(--pale);color:var(--green);padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800}.task{background:#fafbf9;border-radius:14px;padding:14px;margin:10px 0}.task b{display:block;margin-bottom:4px}.check{display:flex;gap:9px;align-items:flex-start;margin:10px 0}.check input{width:19px;height:19px;accent-color:var(--green)}
+.scoregrid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.scoregrid label{font-size:12px;color:var(--muted)}.weektitle{font-size:30px;margin:7px 0 0}.small{font-size:13px;color:var(--muted)}
+.actions{display:flex;gap:8px;flex-wrap:wrap}.watermark{text-align:center;padding:35px 10px 50px;color:#6d7772;letter-spacing:.13em;text-transform:uppercase;font-weight:800}.consult{background:var(--sand)}
+@media(max-width:700px){.grid,.formgrid,.scoregrid{grid-template-columns:1fr}.hero{padding:32px 22px}}
+@media print{.tabs,.actions{display:none}.card{break-inside:avoid}.hero{background:#fff;color:#000;border:1px solid #ddd}.wrap{max-width:none}}
+</style>
+</head>
+<body><div class="wrap">
+<section class="hero"><div class="eyebrow">The Workaholic Way • Communication Programme</div><h1>Speak With Ease.</h1>
+<p>A structured 8-week speaking system for people who understand English but hesitate to speak. Practice is short, measurable and designed to build usable everyday confidence.</p></section>
+
+<section class="card">
+<span class="badge">LEARNER PROFILE</span><h2>Your starting point</h2>
+<div class="formgrid">
+<label>Name<input id="name" placeholder="Your name"></label><label>Email / Contact<input id="contact" placeholder="Email or phone (optional)"></label>
+<label>Profession<input id="profession" placeholder="e.g. Doctor"></label><label>Start date<input id="startdate" type="date"></label>
+<label>Primary speaking goal<input id="goal" placeholder="e.g. Speak confidently at work"></label><label>Current confidence (1–10)<input id="baseline" type="number" min="1" max="10" placeholder="1–10"></label>
+</div>
+<p class="small">This edition saves the learner's details and progress on this device. Use “Export Progress” to create a consultation record that can be sent to the programme owner.</p>
+</section>
+
+<div class="grid">
+<div class="card stat"><b>15–25 min</b>daily practice</div>
+<div class="card stat"><b id="count">0 / 56</b>days completed</div>
+<div class="card stat"><b id="pct">0%</b>programme progress</div>
+</div>
+<section class="card"><b>Overall progress</b><div class="progress" style="margin-top:10px"><div id="bar" class="bar"></div></div></section>
+
+<div class="tabs" id="tabs"></div><div id="week"></div>
+
+<section class="card consult">
+<span class="badge">CONSULTATION RECORD</span><h2>My progress summary</h2>
+<p>Use this before asking for additional coaching. It records completed days, weekly scores and reflections.</p>
+<label>What still feels difficult?<textarea id="difficulty" placeholder="Describe situations where you still hesitate..."></textarea></label>
+<label>What has improved?<textarea id="improved" placeholder="Describe changes you have noticed..."></textarea></label>
+<label>What would you like help with next?<textarea id="help" placeholder="Pronunciation, spontaneous conversation, professional speaking, confidence..."></textarea></label>
+<div class="actions"><button class="btn primary" onclick="exportProgress()">Export Progress</button><button class="btn" onclick="window.print()">Print / Save PDF</button></div>
+<p class="small">Privacy note: this webpage does not automatically transmit personal data. The learner chooses when to export/share their record.</p>
+</section>
+
+<div class="watermark">The Workaholic Way</div>
+</div>
+<script>
+const themes=[
+["Start Speaking","Stop waiting for a perfect sentence. Build the physical habit of speaking English aloud."],
+["Think Simpler","Reduce word-for-word translation and learn to express the same idea with simpler English."],
+["Conversation Basics","Build natural answers, follow-up questions and everyday conversational rhythm."],
+["Flow & Recovery","Learn to pause, rephrase and continue instead of freezing after a mistake."],
+["Workplace Confidence","Transfer speaking confidence into professional conversations."],
+["Hindi ↔ English","Practise intentional language switching without losing your thought."],
+["Spontaneous Speaking","Respond without scripts and tolerate imperfect first attempts."],
+["Independent Confidence","Use your skills in real conversations and build a plan beyond Day 56."]
+];
+const prompts=[
+["Introduce yourself","Record a 60-second introduction: name, profession, city, interests and one current goal.","Listen once. Write down only 2 things to improve. Record it again without trying to sound perfect."],
+["My morning","Describe your morning from waking up until work for 2 minutes.","Repeat using sequence words: first, then, after that, finally."],
+["My surroundings","Choose five objects around you. Describe each without reading.","For each object say what it is, what it looks like, and why/how you use it."],
+["Shadowing","Play 60–90 seconds of clear conversational English. Listen to one sentence, pause, imitate it.","Repeat the same clip 3 times. Copy rhythm and pauses rather than accent."],
+["My day","Explain what happened today as if telling a friend.","Speak for 3 minutes. If stuck, say 'Give me a moment to think' and continue."],
+["Question drill","Answer aloud: What made you happy today? What was difficult? What are you doing tomorrow?","Give at least 3 sentences per answer."],
+["Weekly test","Record an unedited 2-minute introduction and reflection.","Do not restart. Score hesitation, clarity, comfort, flow and recovery below."],
+["Simple explanations","Explain how to make tea to someone who has never made it.","Use short sentences. Avoid searching for sophisticated vocabulary."],
+["No translation","Describe your room directly in English for 2 minutes.","If you don't know a word, describe the object instead of switching languages."],
+["Yesterday's story","Tell yesterday's events in order.","Use: first, later, because, but, eventually."],
+["Opinion practice","Answer: Is social media mostly helpful or harmful?","State your view, give 2 reasons, then mention one counterargument."],
+["Explain a problem","Describe a small problem you solved recently.","Structure: situation → problem → what I did → result."],
+["City talk","Speak for 3 minutes about your city.","Cover food, transport, people, one advantage and one disadvantage."],
+["Weekly test","Answer: What makes someone a good communicator?","Speak for 2 minutes without notes, then score yourself."],
+["Small talk","Pretend a colleague asks 'How was your weekend?'","Answer for 30–60 seconds, then ask two follow-up questions."],
+["Tell a story","Describe a movie, series, book or real incident.","Give context, main event, reaction and conclusion."],
+["Agree politely","Say aloud 3 ways to agree without only saying 'yes'.","Use: 'I see your point', 'I agree because…', 'That's similar to how I see it…'."],
+["Disagree politely","Practise disagreeing with an imaginary colleague.","Use: 'I understand that view, but…' and 'Could we also consider…?'"],
+["Phone simulation","Pretend you are calling to reschedule an appointment.","Introduce yourself, explain the reason, request a change and confirm details."],
+["Five questions","Ask yourself five unexpected everyday questions and answer immediately.","No answer may be only one sentence."],
+["Weekly test","Speak about a recent decision you made.","2 minutes, no restart. Score yourself below."],
+["Pause practice","Tell a story while replacing 'umm' with a silent 2-second pause.","Record and count filler words."],
+["Missing word","Choose an object and explain it without saying its name.","Practise describing around vocabulary gaps."],
+["Retell","Watch/listen to a short English clip and retell it without copying sentences.","Give the main point plus 3 details."],
+["Connect ideas","Speak using firstly, because, however, so and finally.","Topic: one habit you would like to change."],
+["Self-correction","Speak for 3 minutes and allow mistakes.","When needed say 'Let me rephrase that' and continue rather than restarting."],
+["Live conversation","Have a 5-minute English conversation with someone or simulate both sides aloud.","Focus on staying engaged, not grammar accuracy."],
+["Weekly test","Describe a difficult situation you handled.","Use situation → action → result. Score yourself."],
+["My profession","Explain what you do to someone outside your profession.","Avoid jargon and keep the explanation understandable."],
+["Work update","Give an imaginary 60-second update to a colleague.","State what happened, what matters, and what happens next."],
+["Professional phrases","Practise 5 times each: 'In my view…', 'I would suggest…', 'Could we consider…?'","Then use all three in an imaginary discussion."],
+["Explain simply","Explain a familiar professional concept to a non-expert.","Use an analogy or everyday example."],
+["Clarification","Practise asking someone senior to repeat or clarify something.","Use: 'Could you clarify what you mean by…?' and 'Just to confirm…'."],
+["Professional small talk","Simulate meeting a new colleague.","Introduce yourself, ask about their work, and ask 2 natural follow-ups."],
+["Weekly test","Explain one professional concept simply for 2 minutes.","Score yourself below."],
+["Hindi to English","Explain your day for 1 minute in Hindi, then express the same meaning in simple English.","Do not translate sentence-by-sentence; retell the idea."],
+["Natural phrasing","Write 5 Hindi sentences you often use, then say their meaning naturally in English.","Prefer clear meaning over literal translation."],
+["Two audiences","Explain the same health/general topic first to a friend, then to a professional.","Notice how vocabulary and detail change."],
+["Hindi input","Listen to 1 minute of Hindi content and summarise it aloud in English.","Limit yourself to 5 clear sentences."],
+["English input","Listen to English content and explain the main idea conversationally in Hindi.","Then give a 30-second English summary."],
+["Switch drill","Speak about one topic, switching language every 30 seconds.","Keep the idea moving rather than restarting after each switch."],
+["Weekly test","Give a 2-minute bilingual explanation of a familiar topic.","Score comfort and recovery especially."],
+["Random object","Pick the nearest object and speak about it for 90 seconds immediately.","Describe appearance, purpose, history and your opinion of it."],
+["Surprise opinion","Answer immediately: What would you change about your city?","Give a position, 2 reasons and a practical solution."],
+["Beyond work","Answer: What has your profession taught you beyond technical knowledge?","Give one real example."],
+["Unexpected problem","Imagine your plans suddenly change today. Explain what you would do.","Think aloud in English for 2 minutes."],
+["Three-minute day","Describe today's work/day for 3 minutes with no notes.","Do not restart after errors."],
+["Friend challenge","Ask someone for 3 surprise questions, or invent them randomly.","Give 45+ second answers to each."],
+["Weekly test","Answer a random question without preparation for 3 minutes.","Score yourself and compare with Week 1."],
+["Start it","Initiate one real English conversation today.","Afterwards record what felt easy and what felt uncomfortable."],
+["Tell more","When someone asks a question, give a short story instead of a one-word answer.","Aim for 4–6 connected sentences."],
+["Follow up","Ask at least 2 follow-up questions in a real or simulated conversation.","Listen to the answer before deciding the next question."],
+["Make it simple","Explain a complex idea using deliberately simple English.","Imagine the listener is 15 years old."],
+["Ten minutes","Complete a 10-minute English-only conversation or spoken simulation.","Do not correct minor mistakes during the conversation."],
+["Before vs now","Repeat your Day 1 introduction.","Listen to Day 1 and today's recording. Write 3 observable differences."],
+["Final assessment","Speak for 5 minutes: introduce yourself, explain your work, tell a story and share an opinion.","No restart. Complete your scores and write your next 30-day speaking goal."]
+];
+let weekIndex=0;
+const key="tww_speakease_";
+function saveField(id){let e=document.getElementById(id);localStorage.setItem(key+id,e.value)}
+["name","contact","profession","startdate","goal","baseline","difficulty","improved","help"].forEach(id=>{let e=document.getElementById(id);e.value=localStorage.getItem(key+id)||"";e.oninput=()=>saveField(id)});
+function render(){
+ let tabs=document.getElementById("tabs");tabs.innerHTML="";
+ themes.forEach((w,i)=>{let b=document.createElement("button");b.className="tab"+(i==weekIndex?" active":"");b.textContent="Week "+(i+1);b.onclick=()=>{weekIndex=i;render()};tabs.appendChild(b)});
+ let start=weekIndex*7, t=themes[weekIndex], h=`<section class="card"><span class="badge">WEEK ${weekIndex+1}</span><h2 class="weektitle">${t[0]}</h2><p>${t[1]}</p>`;
+ for(let d=0;d<7;d++){let n=start+d+1,p=prompts[start+d];h+=`<div class="day"><span class="badge">DAY ${n}</span><h3>${p[0]}</h3>
+ <div class="task"><b>1 • Warm-up — 3 minutes</b>Speak aloud about how you feel today and what you have done in the last hour. No preparation.</div>
+ <div class="task"><b>2 • Listen & shadow — 5 minutes</b>Choose a short piece of conversational English. Listen sentence-by-sentence and repeat aloud, copying pace, stress and pauses.</div>
+ <div class="task"><b>3 • Main speaking action — 7–10 minutes</b>${p[1]}</div>
+ <div class="task"><b>4 • Deliberate improvement — 3–5 minutes</b>${p[2]}</div>
+ <div class="task"><b>5 • Reflection — 2 minutes</b>Write one sentence you said well and one moment where you hesitated. Decide what you would say next time.</div>
+ <label class="check"><input type="checkbox" data-day="${n}" ${localStorage.getItem(key+"day"+n)?"checked":""}> I completed the full practice for Day ${n}.</label>
+ ${d==6?scoreBlock(weekIndex+1):""}</div>`}
+ h+=`</section>`;document.getElementById("week").innerHTML=h;
+ document.querySelectorAll("[data-day]").forEach(x=>x.onchange=()=>{x.checked?localStorage.setItem(key+"day"+x.dataset.day,"1"):localStorage.removeItem(key+"day"+x.dataset.day);progress()});
+ document.querySelectorAll("[data-score]").forEach(x=>{x.value=localStorage.getItem(key+x.dataset.score)||"";x.oninput=()=>localStorage.setItem(key+x.dataset.score,x.value)});
+ let r=document.getElementById("reflection"); if(r){r.value=localStorage.getItem(key+"reflection"+(weekIndex+1))||"";r.oninput=()=>localStorage.setItem(key+"reflection"+(weekIndex+1),r.value)}
+ progress();
+}
+function scoreBlock(w){return `<div class="task"><b>Weekly score — 1 (difficult) to 5 (strong)</b><div class="scoregrid">
+${["hesitation","clarity","comfort","flow","recovery"].map(s=>`<label>${s[0].toUpperCase()+s.slice(1)}<input type="number" min="1" max="5" data-score="w${w}_${s}"></label>`).join("")}</div>
+<label>Weekly reflection<textarea id="reflection" placeholder="What changed this week? What situation was hardest? What will you repeat?"></textarea></label></div>`}
+function progress(){let c=0;for(let i=1;i<=56;i++)if(localStorage.getItem(key+"day"+i))c++;let p=Math.round(c/56*100);document.getElementById("count").textContent=c+" / 56";document.getElementById("pct").textContent=p+"%";document.getElementById("bar").style.width=p+"%"}
+function exportProgress(){
+ let lines=["SPEAK WITH EASE — LEARNER PROGRESS","The Workaholic Way","",
+ "Name: "+(localStorage.getItem(key+"name")||""),"Contact: "+(localStorage.getItem(key+"contact")||""),
+ "Profession: "+(localStorage.getItem(key+"profession")||""),"Start date: "+(localStorage.getItem(key+"startdate")||""),
+ "Goal: "+(localStorage.getItem(key+"goal")||""),"Starting confidence: "+(localStorage.getItem(key+"baseline")||""),""];
+ let done=[];for(let i=1;i<=56;i++)if(localStorage.getItem(key+"day"+i))done.push(i);
+ lines.push("Completed days: "+done.join(", "),"Overall: "+done.length+"/56 ("+Math.round(done.length/56*100)+"%)","");
+ for(let w=1;w<=8;w++){lines.push("Week "+w+" scores: "+["hesitation","clarity","comfort","flow","recovery"].map(s=>s+"="+(localStorage.getItem(key+"w"+w+"_"+s)||"-")).join(" | "));
+ let rr=localStorage.getItem(key+"reflection"+w);if(rr)lines.push("Reflection: "+rr)}
+ lines.push("","Still difficult: "+(localStorage.getItem(key+"difficulty")||""),"Improved: "+(localStorage.getItem(key+"improved")||""),"Help requested: "+(localStorage.getItem(key+"help")||""));
+ let blob=new Blob([lines.join("\n")],{type:"text/plain"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="Speak-With-Ease-Progress.txt";a.click();URL.revokeObjectURL(a.href)
+}
+render();
+</script></body></html>
