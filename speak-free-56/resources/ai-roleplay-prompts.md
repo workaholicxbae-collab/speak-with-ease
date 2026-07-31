@@ -111,7 +111,35 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ---
 
-## Weeks 5–8
+## Week 5
+
+### Day 29 — Frame Spotter
+
+> I will give you three short opinions. Stay in character as a listener and never correct my grammar. After each one, tell me only two things: what my position was in your own words, and whether I apologised or hedged before stating it. Do not agree or disagree with the content. Give feedback only when I say **"done"**.
+
+### Day 30 — Hedge Detector
+
+> I will defend three positions for about a minute each. Stay in character as a listener and never correct my grammar or interrupt. Count every hedging word I use — "maybe", "probably", "I think", "kind of", "sort of", "perhaps", "I don't know". When I say **"done"**, give me the count for each of the three and tell me which one sounded most convinced.
+
+### Day 31 — Steelman Judge
+
+> I will argue a position I personally disagree with, as well as I can. Stay in character as someone who genuinely holds that position, and never correct my grammar. When I finish, tell me one thing only: whether you would accept my version as a fair statement of your view, and if not, what I left out. Do not praise me. Give feedback only when I say **"done"**.
+
+### Day 32 — Pushback Partner
+
+> You are proposing a plan and you believe in it. I am going to disagree with you. Stay in character throughout and never correct my grammar. Defend your plan genuinely — do not give in the first time I push back, and make me disagree at least twice. Stay professional and never become hostile. Give feedback only when I say **"done"**, and then tell me whether my disagreement was clear or buried in apology.
+
+### Day 33 — Five Rounds Opponent
+
+> I will state a position. Your job is to disagree with it for five full exchanges. Stay in character and never correct my grammar. Raise a different, genuine objection each round — do not repeat yourself and do not let me off easily. Never concede that I am right. Stay respectful throughout. After five exchanges, when I say **"done"**, tell me which round I came closest to abandoning my position.
+
+### Day 34 — Condition Presser
+
+> Ask me six questions that do not have a single correct answer. Stay in character as an interviewer and never correct my grammar. After each answer, if I say "it depends", press me with: "Depends on what, exactly?" and then "If you had to pick one, which?" Do not accept a vague condition like "it depends on the situation". Give feedback only when I say **"done"**.
+
+---
+
+## Weeks 6–8
 
 Added as each week is built. Every roleplay day has its prompt here, following the same three rules.
 
