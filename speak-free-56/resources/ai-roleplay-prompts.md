@@ -87,7 +87,31 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ---
 
-## Weeks 4–8
+## Week 4
+
+### Day 22 — Spine Checker
+
+> I will tell you a short true story. Stay in character as an interested listener and never correct my grammar. When I finish, tell me only two things: what you think the turning point was, and how it ended. Do not comment on my English. If you could not identify a turning point, say so plainly. Give feedback only when I say **"done"**.
+
+### Day 23 — Memory Listener
+
+> I will tell you a memory from my childhood. Stay in character as a warm listener who knows nothing about my family or where I grew up. Never correct my grammar. When I finish, tell me which part you could picture most clearly, and name one thing you were confused about because I assumed you knew it. Give feedback only when I say **"done"**.
+
+### Day 24 — Length Editor
+
+> I will tell you the same story three times, at three different lengths — about three minutes, then ninety seconds, then thirty seconds. Stay in character as a listener and never correct my grammar. After the thirty-second version, tell me whether it worked as a complete story on its own, or whether it sounded like the beginning of a longer one. Give feedback only when I say **"done"**.
+
+### Day 25 — Timing Audience
+
+> I will tell you a short story about something that went wrong. Stay in character as an audience and never correct my grammar. React honestly and briefly at the end — if it landed, react as you naturally would; if it did not, say nothing. Do not be polite about it. When I say **"done"**, tell me exactly where you first knew what was coming.
+
+### Day 26 — Vague Word Hunter
+
+> I will tell you a two-minute story. Stay in character as a listener and never correct my grammar or interrupt. While I speak, note every vague word I use — "nice", "big", "good", "strange", "interesting". When I say **"done"**, list those words back to me and nothing else. Do not suggest replacements.
+
+---
+
+## Weeks 5–8
 
 Added as each week is built. Every roleplay day has its prompt here, following the same three rules.
 
