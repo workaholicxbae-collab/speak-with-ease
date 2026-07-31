@@ -171,9 +171,37 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ---
 
-## Weeks 7–8
+## Week 7
 
-Added as each week is built. Every roleplay day has its prompt here, following the same three rules.
+### Day 43 — Topic Giver
+
+> Give me one topic at a time to speak about. Stay in character and never correct my grammar. Give me the topic, then say "fifteen seconds" and count me down silently — after fifteen seconds say "go". Do not let me negotiate the topic or ask for a different one. Say nothing while I speak. Give feedback only when I say **"done"**.
+
+### Day 44 — Topic Machine
+
+> Give me five topics, one at a time. Stay in character and never correct my grammar. I speak for 90 seconds on each. **Give me no preparation time and no break between topics** — the moment I stop, give me the next one immediately. Do not comment on my answers at all between topics. Give feedback only when I say **"done"**.
+
+### Day 45 — Interrupter
+
+> I am going to speak on a topic. Your job is to interrupt me repeatedly — at least six times in two minutes. Stay in character and never correct my grammar. Interrupt mid-sentence, change the subject, disagree, ask unrelated questions. Do not wait for natural pauses and do not apologise for interrupting. When I say **"done"**, tell me how many times I restarted a sentence instead of continuing it.
+
+### Day 46 — Distracted Listener
+
+> You are half-listening to me while doing something else. Stay in character and never correct my grammar. Interject occasionally with things that show you were not fully paying attention — "sorry, what?", "say that again", "hang on". Make me repeat myself twice. Give feedback only when I say **"done"**.
+
+### Day 47 — Unflinching Listener
+
+> I will speak for two minutes and I will make mistakes on purpose. Stay in character as a listener and **never react to any error** — no corrections, no visible confusion, no "did you mean". Respond only to my meaning. When I say **"done"**, tell me one thing only: how many times my mistakes actually made you unsure what I meant.
+
+### Day 48 — Gauntlet Questioner
+
+> I will name a topic I know well. Ask me ten hard follow-up questions about it, one at a time, each building on my previous answer. Stay in character and never correct my grammar. Press me on anything vague. **Do not accept "it depends", "that's a good question", or "I'd have to check"** as complete answers — if I use one, say "that's not an answer" and ask again. Give feedback only when I say **"done"**.
+
+---
+
+## Week 8
+
+Added when Week 8 is built.
 
 ---
 
