@@ -66,6 +66,21 @@ textarea{min-height:80px}
 .req li.ok .dot{background:var(--espresso);border-color:var(--espresso)}
 .linkbtn{padding:0;border:0;background:none;font:inherit;font-size:13px;color:var(--espresso);text-decoration:underline;cursor:pointer}
 .btn[disabled]{opacity:.5;cursor:not-allowed}
+.atabwrap{overflow-x:auto;margin-top:14px}
+.atab{width:100%;min-width:660px;border-collapse:collapse;font-size:13px}
+.atab th{text-align:left;white-space:nowrap;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--espresso);border-bottom:1px solid var(--beige);padding:0 12px 9px 0}
+.atab td{padding:11px 12px 11px 0;border-bottom:1px solid var(--beige);vertical-align:middle}
+.atab tr:last-child td{border-bottom:0}
+.atab .who{font-weight:600}
+.atab .sub{display:block;font-size:12px;font-weight:400;color:var(--mocha)}
+.mini{display:inline-block;height:8px;width:96px;background:var(--beige);border-radius:20px;overflow:hidden;vertical-align:middle;margin-right:7px}
+.mini i{display:block;height:100%;background:linear-gradient(90deg,var(--espresso),var(--mocha))}
+.dwrap{background:var(--cream);border-left:3px solid var(--rose);border-radius:0 14px 14px 0;padding:15px 17px;margin:14px 0 0}
+.dwrap h4{margin:0 0 4px;font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;font-weight:600}
+.dwrap h5{margin:14px 0 4px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--espresso)}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin:4px 0 0}
+.chip{background:var(--beige);color:var(--espresso);border-radius:6px;padding:2px 7px;font-size:11px;font-weight:600}
+.qt{border-left:2px solid var(--beige);padding-left:11px;margin:7px 0;font-size:13px}
 .actions{display:flex;gap:8px;flex-wrap:wrap}
 .muted{color:var(--mocha);font-size:13px}
 .watermark{text-align:center;padding:46px 20px}
@@ -85,6 +100,7 @@ textarea{min-height:80px}
 <section class="hero"><div class="lockup"><span class="wordmark">The Workaholic Way</span><svg class="flor f-lock" aria-hidden="true"><use href="#flor"/></svg></div><div class="prog">Communication Programme</div><h1>Speak With Ease.</h1><p>An 8-week, 56-day speaking system for people who understand English but hesitate to speak it. No theory lectures, no perfect-grammar obsession — just short, daily, measurable practice that builds real speaking confidence, backed by secure cloud progress so nothing you build gets lost.</p><div class="mood">Focus &nbsp;·&nbsp; Grow &nbsp;·&nbsp; Achieve</div></section>
 <section class="card auth"><div><b>My learner account</b><div id="who" class="muted">Sign in to begin.</div></div><div class="actions"><button id="open" class="btn primary">Sign in / Create account</button><button id="out" class="btn" style="display:none">Sign out</button></div></section>
 <div id="app" class="app">
+<section id="adminCard" class="card" style="display:none"><span class="badge">ADMIN</span><h2>Learner progress</h2><p class="muted" id="adminSummary">Loading…</p><div class="actions"><button id="adminRefresh" class="btn">Refresh</button><button id="adminCsv" class="btn">Download CSV</button></div><div class="atabwrap"><table class="atab"><thead><tr><th>Learner</th><th>Started</th><th>Days</th><th>Progress</th><th>Weeks</th><th>Last active</th><th></th></tr></thead><tbody id="adminRows"></tbody></table></div><div id="adminDetail"></div></section>
 <section class="card"><span class="badge">LEARNER PROFILE</span><h2>Your starting point</h2><div class="form"><label>Name<input id="nm"></label><label>Email<input id="em" disabled></label><label>Profession<input id="pr"></label><label>Start date<input id="sd" type="date"></label><label>Speaking goal<input id="gl"></label><label>Starting confidence (1–10)<input id="cf" type="number" min="1" max="10"></label></div><p id="save" class="muted">Changes are securely saved to your learner account in the cloud.</p></section>
 <div class="grid"><section class="card stat"><b>15–25 min</b>per day</section><section class="card stat"><b id="done">0 / 56</b>completed</section><section class="card stat"><b id="pc">0%</b>progress</section></div>
 <section class="card"><b>Cloud sync</b><div class="muted">Completed days, weekly assessments and consultation requests are saved to your signed-in account, so your streak survives a lost phone or a new laptop.</div></section><section class="card"><div class="progress"><div id="bar" class="bar" style="width:0"></div></div></section><div id="tabs" class="tabs"></div><div id="week"></div>
@@ -248,6 +264,44 @@ reset.onclick=async()=>{let email=ae.value.trim();
  msg.textContent=error?friendly(error.message):"If that email has an account, a reset link is on its way. Check your inbox.";
  reset.disabled=false};
 outBtn.onclick=()=>sb.auth.signOut();
-async function auth(){let {data:{user}}=await sb.auth.getUser();u=user||null;app.style.display=u?"block":"none";openBtn.style.display=u?"none":"inline-block";outBtn.style.display=u?"inline-block":"none";who.textContent=u?"Signed in as "+u.email:"Sign in to begin.";if(u)load()}sb.auth.onAuthStateChange(()=>setTimeout(auth,0));auth();
+/* ---------- admin ---------- */
+const adminCard=$("adminCard"),adminRows=$("adminRows"),adminSummary=$("adminSummary"),adminDetail=$("adminDetail"),adminRefresh=$("adminRefresh"),adminCsv=$("adminCsv");
+let roster=[];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const ago=t=>{if(!t)return"never";let d=Math.floor((Date.now()-new Date(t))/864e5);return d<=0?"today":d==1?"yesterday":d+" days ago"};
+async function checkAdmin(){let {data,error}=await sb.rpc("is_admin");let ok=!error&&data===true;adminCard.style.display=ok?"block":"none";if(ok)loadAdmin()}
+async function loadAdmin(){adminSummary.textContent="Loading…";adminDetail.innerHTML="";
+ let {data,error}=await sb.rpc("admin_learner_overview");
+ if(error){adminSummary.textContent="Couldn't load learners: "+error.message;adminRows.innerHTML="";return}
+ roster=data||[];
+ if(!roster.length){adminSummary.textContent="No learners have signed up yet.";adminRows.innerHTML="";return}
+ let wk=Date.now()-6048e5,active=roster.filter(r=>r.last_active&&new Date(r.last_active)>wk).length;
+ let avg=Math.round(roster.reduce((s,r)=>s+(r.days_done||0),0)/roster.length);
+ adminSummary.textContent=`${roster.length} learner${roster.length>1?"s":""} · ${active} active in the last 7 days · ${avg} days completed on average`;
+ adminRows.innerHTML=roster.map((r,i)=>`<tr><td><span class="who">${esc(r.full_name||"(no name yet)")}</span><span class="sub">${esc(r.email)}${r.profession?" · "+esc(r.profession):""}</span></td><td>${esc(r.start_date||"—")}</td><td>${r.days_done} / 56</td><td><span class="mini"><i style="width:${r.pct}%"></i></span>${r.pct}%</td><td>${r.weeks_assessed} / 8</td><td>${esc(ago(r.last_active))}</td><td><button class="btn" data-view="${i}">View</button></td></tr>`).join("");
+ adminRows.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>showLearner(+b.dataset.view))}
+async function showLearner(i){let r=roster[i];
+ adminDetail.innerHTML=`<div class="dwrap"><h4>${esc(r.full_name||r.email)}</h4><p class="muted">Loading…</p></div>`;
+ let {data,error}=await sb.rpc("admin_learner_detail",{target:r.user_id});
+ if(error){adminDetail.innerHTML=`<div class="dwrap"><p class="muted">${esc(error.message)}</p></div>`;return}
+ let days=data.days||[],weeks=data.weeks||[],cons=data.consultations||[];
+ let h=`<div class="dwrap"><h4>${esc(r.full_name||r.email)}</h4><p class="muted">${esc(r.email)}${r.profession?" · "+esc(r.profession):""}${r.starting_confidence?" · starting confidence "+esc(r.starting_confidence)+"/10":""}</p>`;
+ if(r.speaking_goal)h+=`<h5>Goal</h5><div class="qt">${esc(r.speaking_goal)}</div>`;
+ h+=`<h5>Days completed (${days.length})</h5>`+(days.length?`<div class="chips">${days.map(d=>`<span class="chip">${esc(d)}</span>`).join("")}</div>`:`<p class="muted">None yet.</p>`);
+ h+=`<h5>Weekly assessments (${weeks.length})</h5>`;
+ h+=weeks.length?weeks.map(w=>`<div class="qt"><b>Week ${esc(w.week_number)}</b> — hesitation ${esc(w.hesitation??"–")} · clarity ${esc(w.clarity??"–")} · comfort ${esc(w.comfort??"–")} · flow ${esc(w.flow??"–")} · recovery ${esc(w.recovery??"–")}${w.reflection?`<br>${esc(w.reflection)}`:""}</div>`).join(""):`<p class="muted">None yet.</p>`;
+ h+=`<h5>Consultation requests (${cons.length})</h5>`;
+ h+=cons.length?cons.map(c=>`<div class="qt"><b>Still difficult:</b> ${esc(c.difficulty||"—")}<br><b>Improved:</b> ${esc(c.improvements||"—")}<br><b>Wants help with:</b> ${esc(c.help_requested||"—")}</div>`).join(""):`<p class="muted">None yet.</p>`;
+ adminDetail.innerHTML=h+`</div>`;
+ adminDetail.scrollIntoView({behavior:"smooth",block:"nearest"})}
+adminRefresh.onclick=loadAdmin;
+adminCsv.onclick=()=>{if(!roster.length)return;
+ let cols=["full_name","email","profession","start_date","starting_confidence","days_done","pct","weeks_assessed","consultations","last_active","signed_up"];
+ let cell=v=>`"${String(v??"").replace(/"/g,'""')}"`;
+ let csv=[cols.join(",")].concat(roster.map(r=>cols.map(c=>cell(r[c])).join(","))).join("\n");
+ let a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="speak-with-ease-learners.csv";a.click();URL.revokeObjectURL(a.href)};
+
+async function auth(){let {data:{user}}=await sb.auth.getUser();u=user||null;app.style.display=u?"block":"none";openBtn.style.display=u?"none":"inline-block";outBtn.style.display=u?"inline-block":"none";who.textContent=u?"Signed in as "+u.email:"Sign in to begin.";if(u){load();checkAdmin()}else{adminCard.style.display="none"}}
+sb.auth.onAuthStateChange(()=>setTimeout(auth,0));auth();
 consultBtn.onclick=async()=>{cm.textContent="Submitting…";let {error}=await sb.from("consultation_requests").insert({user_id:u.id,difficulty:dif.value,improvements:imp.value,help_requested:hlp.value});cm.textContent=error?error.message:"Submitted for review ✓"}
 </script></body></html>
