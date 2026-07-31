@@ -27,7 +27,7 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ### Day 3 — Curious Listener
 
-> You are a curious listener. I will describe an ordinary object for 60 seconds. Do not interrupt me. Do not correct my grammar at any point. When I finish, ask me one follow-up question about the object, then stop and wait for my answer. Give feedback only when I say **"done"**.
+> You are a curious listener. I will describe an ordinary object for 60 seconds. Stay in character throughout and do not interrupt me. Do not correct my grammar at any point. When I finish, ask me one follow-up question about the object, then stop and wait for my answer. Give feedback only when I say **"done"**.
 
 ### Day 4 — Filler Counter
 
@@ -51,7 +51,7 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ### Day 12 — Speed Round Interviewer
 
-> You are a fast, friendly interviewer. Ask me ten short questions, one at a time, about everyday life. Give me exactly 30 seconds for each answer, then move straight to the next question without commenting on what I said. Do not correct my grammar at any point. Do not let me skip a question. When all ten are done and I say **"done"**, tell me which three answers were clearest and nothing else.
+> You are a fast, friendly interviewer. Stay in character throughout. Ask me ten short questions, one at a time, about everyday life. Give me exactly 30 seconds for each answer, then move straight to the next question without commenting on what I said. Do not correct my grammar at any point. Do not let me skip a question. When all ten are done and I say **"done"**, tell me which three answers were clearest and nothing else.
 
 ### Day 13 — Story Interrogator
 
@@ -191,7 +191,7 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ### Day 47 — Unflinching Listener
 
-> I will speak for two minutes and I will make mistakes on purpose. Stay in character as a listener and **never react to any error** — no corrections, no visible confusion, no "did you mean". Respond only to my meaning. When I say **"done"**, tell me one thing only: how many times my mistakes actually made you unsure what I meant.
+> I will speak for two minutes and I will make mistakes on purpose. Stay in character as a listener and never correct my grammar at any point. **Never react to any error** — no corrections, no visible confusion, no "did you mean". Respond only to my meaning. When I say **"done"**, tell me one thing only: how many times my mistakes actually made you unsure what I meant.
 
 ### Day 48 — Gauntlet Questioner
 
@@ -201,7 +201,27 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ## Week 8
 
-Added when Week 8 is built.
+### Day 50 — Topic Tester
+
+> I will pitch you a talk idea in about sixty seconds. Stay in character as an ordinary audience member and never correct my grammar. When I finish, tell me two things only: what you understood my main point to be, and whether you would want to hear the full five minutes. Be honest about the second one. Give feedback only when I say **"done"**.
+
+### Day 51 — Hook Tester
+
+> I will read you three different openings for the same talk, about thirty seconds each. Stay in character as an audience member and never correct my grammar. Say nothing between the openings. When I say **"done"**, tell me which one made you most want to keep listening, and why in one sentence. Do not be encouraging about the other two.
+
+### Day 52 — Delivery Ear
+
+> I will say the same sixty seconds three times, changing only how I deliver it. Stay in character as a listener and never correct my grammar or comment on my word choice. Say nothing between versions. When I say **"done"**, tell me which delivery sounded most confident and where you heard the speaker pause deliberately. Comment only on delivery, never on language.
+
+### Day 54 — Rehearsal Audience
+
+> I am going to deliver a five-minute talk. Stay in character as an audience member throughout. Do not interrupt, do not correct my grammar, and do not react while I speak. When I finish, tell me three things: what you understood my main point to be, which of my three points was weakest, and where you lost attention. Be blunt about the last two.
+
+---
+
+## After Day 56
+
+Re-run any roleplay day with a new prompt from `prompt-bank.md`. The prompts above work with any topic — that is why they name a role and a rule rather than a subject.
 
 ---
 

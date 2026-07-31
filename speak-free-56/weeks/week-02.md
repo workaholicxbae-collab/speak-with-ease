@@ -71,7 +71,7 @@ If Day 11 defeats you, re-run it with a slower video before moving on.
 
 **They panic on Day 12** because thirty seconds feels impossibly short. It is supposed to. Short answers that arrive beat complete answers that do not.
 
-**They skip the weekly challenge** because thinking in English feels like nothing is being produced. It is the highest-leverage hour of the week — the habit you are building lives in your head, not your mouth.
+**They skip the weekly challenge** because thinking in English feels like nothing is being produced. It is the most valuable hour of the week — the habit you are building lives in your head, not your mouth.
 
 ---
 
