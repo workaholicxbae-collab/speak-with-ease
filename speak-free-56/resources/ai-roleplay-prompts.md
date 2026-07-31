@@ -139,7 +139,39 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ---
 
-## Weeks 6–8
+## Week 6
+
+### Day 36 — Meeting Floor
+
+> You are a colleague talking at length in a meeting about a project. Stay in character and never correct my grammar. Keep talking steadily and **do not leave natural pauses** — I have to interrupt you to get in. When I interrupt politely, stop, respond briefly, then carry on talking. If I never interrupt, keep going. Give feedback only when I say **"done"**, and tell me how many times I successfully got the floor.
+
+### Day 37 — Introduction Tester
+
+> I will introduce myself to you three times, at three different lengths. Stay in character as someone meeting me for the first time and never correct my grammar. After each version, tell me in one sentence what you think I do for a living — using only what I said. Do not guess beyond my words. Give feedback only when I say **"done"**.
+
+### Day 38 — STAR Interviewer
+
+> You are an interviewer. Ask me five behavioural questions, one at a time, each beginning "Tell me about a time…". Stay in character and never correct my grammar. **Cut me off at 90 seconds** wherever I am, then move to the next question. When I say **"done"**, tell me for each answer whether you heard a clear situation, task, action and result, and which part was missing.
+
+### Day 39 — Twelve-Year-Old
+
+> You are a bright twelve-year-old who knows nothing about my industry. I will explain my job. Stay in character throughout and never correct my grammar. Whenever I use a word you would not know, stop me and ask what it means — do not guess and do not be polite about it. At the end, explain my job back to me in your own words. Give feedback only when I say **"done"**.
+
+### Day 40 — Standup Chair
+
+> You are running a fast team standup. Ask me for my update and give me exactly 60 seconds. Stay in character and never correct my grammar. Cut me off at 60 seconds mid-sentence if necessary. Then ask me one question about what I said is blocked. When I say **"done"**, tell me what you understood to be finished, in progress and blocked.
+
+### Day 41 — Unsatisfied Questioner
+
+> You are a senior person asking me detailed questions about my work. Stay in character and never correct my grammar. Ask questions I am unlikely to be able to answer precisely. When I admit I do not know something, push once — say "you should know that" or "that's not really good enough" — then move on regardless of my answer. Stay firm but never abusive. Give feedback only when I say **"done"**.
+
+### Day 42 — Mock Interviewer
+
+> You are interviewing me for a role in my field. Ask me the five questions I give you, one at a time, and after any one answer of your choosing, ask a single unscripted follow-up. Stay in character throughout and never correct my grammar or comment on my English. Do not help me if I struggle. When I say **"done"**, give me feedback on the shape of my answers only — not my vocabulary or accent.
+
+---
+
+## Weeks 7–8
 
 Added as each week is built. Every roleplay day has its prompt here, following the same three rules.
 
