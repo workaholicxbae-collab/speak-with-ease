@@ -49,7 +49,23 @@ textarea{min-height:80px}
 .check input{width:20px;height:20px;accent-color:var(--espresso)}
 .modal{display:none;position:fixed;inset:0;background:#3e2e29cc;align-items:center;justify-content:center;padding:18px}
 .modal.show{display:flex}
-.box{background:#fff;padding:26px;border-radius:20px;width:min(450px,100%)}
+.box{background:#fff;padding:26px;border-radius:20px;width:min(450px,100%);max-height:92vh;overflow-y:auto}
+.box label{display:block;margin-bottom:12px}
+.lead{margin:-2px 0 16px}
+.pw{position:relative;display:block}
+.pw input{padding-right:46px}
+.eyebtn{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:36px;height:36px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:none;color:var(--mocha);cursor:pointer}
+.eyebtn:hover{color:var(--espresso);background:var(--beige)}
+.eyebtn:focus-visible{outline:2px solid var(--mocha);outline-offset:1px}
+.eyebtn svg{width:19px;height:19px;display:block}
+.warn{margin:-6px 0 10px;font-size:12px;font-weight:600;color:var(--espresso)}
+.req{list-style:none;margin:-4px 0 14px;padding:0;font-size:12px;color:var(--mocha)}
+.req li{display:flex;align-items:center;gap:8px;padding:2px 0}
+.req .dot{width:13px;height:13px;border-radius:50%;border:1.5px solid var(--beige);flex:none}
+.req li.ok{color:var(--espresso);font-weight:600}
+.req li.ok .dot{background:var(--espresso);border-color:var(--espresso)}
+.linkbtn{padding:0;border:0;background:none;font:inherit;font-size:13px;color:var(--espresso);text-decoration:underline;cursor:pointer}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
 .actions{display:flex;gap:8px;flex-wrap:wrap}
 .muted{color:var(--mocha);font-size:13px}
 .watermark{text-align:center;padding:46px 20px}
@@ -64,7 +80,7 @@ textarea{min-height:80px}
 .f-wk{width:13px;height:13px;margin-left:2px}
 @media(max-width:650px){.grid,.form{grid-template-columns:1fr}.auth{align-items:flex-start;flex-direction:column}}
 </style></head><body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="flor" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(120 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(180 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(240 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(300 12 12)"/></g></symbol></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="flor" viewBox="0 0 24 24"><g fill="currentColor"><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(120 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(180 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(240 12 12)"/><ellipse cx="12" cy="6.4" rx="2.4" ry="5.4" transform="rotate(300 12 12)"/></g></symbol><symbol id="ico-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1.8 12S5.4 5.8 12 5.8 22.2 12 22.2 12 18.6 18.2 12 18.2 1.8 12 1.8 12Z"/><circle cx="12" cy="12" r="3.1"/></symbol><symbol id="ico-eyeoff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.8 6.1A9.6 9.6 0 0 1 12 5.8c6.6 0 10.2 6.2 10.2 6.2a17.3 17.3 0 0 1-3.3 4M6.3 7.8A17.1 17.1 0 0 0 1.8 12S5.4 18.2 12 18.2a9.4 9.4 0 0 0 3.9-.8"/><path d="M9.9 9.9a3.1 3.1 0 0 0 4.3 4.3"/><path d="M3.2 3.2l17.6 17.6"/></symbol></svg>
 <div class="wrap">
 <section class="hero"><div class="lockup"><span class="wordmark">The Workaholic Way</span><svg class="flor f-lock" aria-hidden="true"><use href="#flor"/></svg></div><div class="prog">Communication Programme</div><h1>Speak With Ease.</h1><p>An 8-week, 56-day speaking system for people who understand English but hesitate to speak it. No theory lectures, no perfect-grammar obsession — just short, daily, measurable practice that builds real speaking confidence, backed by secure cloud progress so nothing you build gets lost.</p><div class="mood">Focus &nbsp;·&nbsp; Grow &nbsp;·&nbsp; Achieve</div></section>
 <section class="card auth"><div><b>My learner account</b><div id="who" class="muted">Sign in to begin.</div></div><div class="actions"><button id="open" class="btn primary">Sign in / Create account</button><button id="out" class="btn" style="display:none">Sign out</button></div></section>
@@ -74,7 +90,7 @@ textarea{min-height:80px}
 <section class="card"><b>Cloud sync</b><div class="muted">Completed days, weekly assessments and consultation requests are saved to your signed-in account, so your streak survives a lost phone or a new laptop.</div></section><section class="card"><div class="progress"><div id="bar" class="bar" style="width:0"></div></div></section><div id="tabs" class="tabs"></div><div id="week"></div>
 <section class="card"><span class="badge">CONSULTATION RECORD</span><h2>Consultation request</h2><p class="muted">Use this before asking for extra coaching — it gives your coach the exact picture of where you are.</p><label>What still feels difficult?<textarea id="dif"></textarea></label><label>What improved?<textarea id="imp"></textarea></label><label>What help would you like next?<textarea id="hlp"></textarea></label><div class="actions"><button id="consult" class="btn primary">Submit for review</button><button class="btn" onclick="print()">Print / Save PDF</button></div><p id="cm" class="muted"></p></section>
 </div><div class="watermark"><svg class="flor f-wm" aria-hidden="true"><use href="#flor"/></svg><span class="tww" aria-hidden="true">TWW</span><p class="fmark">Designed by <b>The Workaholic Way</b><svg class="flor f-sm" aria-hidden="true"><use href="#flor"/></svg></p></div></div>
-<div id="modal" class="modal"><div class="box"><div class="mark"><svg class="flor f-mk" aria-hidden="true"><use href="#flor"/></svg><span>W</span></div><h2 id="ttl">Sign in</h2><label id="nw" style="display:none">Full name<input id="an"></label><label>Email<input id="ae" type="email"></label><label>Password<input id="ap" type="password"></label><div class="actions"><button id="submit" class="btn primary">Sign in</button><button id="switcher" class="btn">Create account</button><button id="close" class="btn">Close</button></div><p id="msg" class="muted"></p></div></div>
+<div id="modal" class="modal"><div class="box"><div class="mark"><svg class="flor f-mk" aria-hidden="true"><use href="#flor"/></svg><span>W</span></div><h2 id="ttl">Sign in</h2><p id="sub" class="muted lead">Sign in to pick up where you left off.</p><label id="nw" style="display:none">Full name<input id="an" autocomplete="name"></label><label>Email<input id="ae" type="email" autocomplete="email" inputmode="email" spellcheck="false"></label><label>Password<span class="pw"><input id="ap" type="password" autocomplete="current-password"><button type="button" id="eye" class="eyebtn" aria-pressed="false" aria-label="Show password" title="Show password"><svg aria-hidden="true"><use href="#ico-eye"/></svg></button></span></label><p id="caps" class="warn" hidden>Caps Lock is on.</p><ul id="req" class="req" hidden><li data-r="len"><span class="dot"></span>At least 8 characters</li><li data-r="ltr"><span class="dot"></span>One letter</li><li data-r="num"><span class="dot"></span>One number</li></ul><div class="actions"><button id="submit" class="btn primary">Sign in</button><button id="switcher" class="btn">Create account</button><button id="close" class="btn">Close</button></div><p id="forgot" class="muted"><button type="button" id="reset" class="linkbtn">Forgotten your password?</button></p><p id="msg" class="muted" role="status" aria-live="polite"></p></div></div>
 <script>
 const sb=supabase.createClient("https://jaumsvgeojrfjagcvkyh.supabase.co","sb_publishable_9eWnfxxUQXG9eWV1vaip5A_llrL1v1Y");
 const $=id=>document.getElementById(id);
@@ -192,7 +208,46 @@ async function saveScore(x){let q=+x.dataset.w,k=x.dataset.s;scores[q]=scores[q]
 async function profile(){let {error}=await sb.from("profiles").update({full_name:nm.value,profession:pr.value,speaking_goal:gl.value,starting_confidence:cf.value?+cf.value:null,start_date:sd.value||null,updated_at:new Date().toISOString()}).eq("id",u.id);save.textContent=error?error.message:"Profile saved ✓"}
 ["nm","pr","gl","cf","sd"].forEach(i=>document.getElementById(i).onchange=profile);
 async function load(){let [{data:p},{data:d},{data:s}]=await Promise.all([sb.from("profiles").select("*").eq("id",u.id).single(),sb.from("daily_progress").select("*").eq("user_id",u.id),sb.from("weekly_assessments").select("*").eq("user_id",u.id)]);if(p){nm.value=p.full_name||"";pr.value=p.profession||"";gl.value=p.speaking_goal||"";cf.value=p.starting_confidence||"";sd.value=p.start_date||""}em.value=u.email;days=new Set((d||[]).filter(x=>x.completed).map(x=>x.day_number));scores={};(s||[]).forEach(x=>scores[x.week_number]=x);render()}
-let signup=false;openBtn.onclick=()=>modal.classList.add("show");closeBtn.onclick=()=>modal.classList.remove("show");switcherBtn.onclick=()=>{signup=!signup;ttl.textContent=signup?"Create account":"Sign in";submitBtn.textContent=signup?"Create account":"Sign in";switcherBtn.textContent=signup?"I already have an account":"Create account";nw.style.display=signup?"block":"none";msg.textContent=""};submitBtn.onclick=async()=>{msg.textContent="Working…";if(signup){let {error}=await sb.auth.signUp({email:ae.value.trim(),password:ap.value,options:{data:{full_name:an.value.trim()},emailRedirectTo:location.href}});msg.textContent=error?error.message:"Account created. Check your email to confirm it, then return and sign in."}else{let {error}=await sb.auth.signInWithPassword({email:ae.value.trim(),password:ap.value});msg.textContent=error?error.message:"Signed in.";if(!error)modal.classList.remove("show")}};outBtn.onclick=()=>sb.auth.signOut();
+const eye=$("eye"),caps=$("caps"),req=$("req"),reset=$("reset"),forgot=$("forgot"),sub=$("sub");
+let signup=false;
+function setEye(show){ap.type=show?"text":"password";eye.setAttribute("aria-pressed",show);eye.setAttribute("aria-label",show?"Hide password":"Show password");eye.title=show?"Hide password":"Show password";eye.querySelector("use").setAttribute("href",show?"#ico-eyeoff":"#ico-eye")}
+eye.onclick=()=>{setEye(ap.type=="password");ap.focus()};
+function capsCheck(e){caps.hidden=!(e.getModifierState&&e.getModifierState("CapsLock"))}
+ap.addEventListener("keydown",capsCheck);ap.addEventListener("keyup",capsCheck);ap.addEventListener("blur",()=>caps.hidden=true);
+const RULES={len:v=>v.length>=8,ltr:v=>/[a-zA-Z]/.test(v),num:v=>/\d/.test(v)};
+function checkPw(){let v=ap.value,all=true;req.querySelectorAll("[data-r]").forEach(li=>{let ok=RULES[li.dataset.r](v);li.classList.toggle("ok",ok);if(!ok)all=false});if(signup)submitBtn.disabled=!all||!ae.value.trim();return all}
+ap.addEventListener("input",()=>{if(signup)checkPw()});ae.addEventListener("input",()=>{if(signup)checkPw()});
+function friendly(m){let s=(m||"").toLowerCase();
+ if(s.includes("invalid login credentials"))return "That email and password don't match. Check both, or reset your password below.";
+ if(s.includes("email not confirmed"))return "Confirm your email first — we sent a link when you signed up.";
+ if(s.includes("already registered")||s.includes("already been registered"))return "That email already has an account. Switch to Sign in instead.";
+ if(s.includes("password should be at least"))return "That password is too short — use at least 8 characters.";
+ if(s.includes("unable to validate email")||s.includes("invalid email"))return "That email address doesn't look right.";
+ if(s.includes("rate limit")||s.includes("too many"))return "Too many attempts. Wait a minute, then try again.";
+ if(s.includes("failed to fetch")||s.includes("network"))return "Couldn't reach the server. Check your connection and try again.";
+ return m}
+function setMode(){ttl.textContent=signup?"Create account":"Sign in";sub.textContent=signup?"Set up your learner account. Your progress is saved to the cloud, so it survives a new phone.":"Sign in to pick up where you left off.";submitBtn.textContent=signup?"Create account":"Sign in";switcherBtn.textContent=signup?"I already have an account":"Create account";nw.style.display=signup?"block":"none";req.hidden=!signup;forgot.hidden=signup;ap.setAttribute("autocomplete",signup?"new-password":"current-password");msg.textContent="";submitBtn.disabled=false;if(signup)checkPw()}
+switcherBtn.onclick=()=>{signup=!signup;setMode()};
+function closeModal(){modal.classList.remove("show");ap.value="";setEye(false);caps.hidden=true;msg.textContent=""}
+openBtn.onclick=()=>{modal.classList.add("show");setMode();setTimeout(()=>ae.focus(),50)};
+closeBtn.onclick=closeModal;
+document.addEventListener("keydown",e=>{if(e.key=="Escape"&&modal.classList.contains("show"))closeModal()});
+[ae,ap,an].forEach(el=>el.addEventListener("keydown",e=>{if(e.key=="Enter"){e.preventDefault();submitBtn.click()}}));
+submitBtn.onclick=async()=>{let email=ae.value.trim();
+ if(!email){msg.textContent="Enter your email address.";ae.focus();return}
+ if(!ap.value){msg.textContent="Enter your password.";ap.focus();return}
+ if(signup&&!checkPw()){msg.textContent="Your password doesn't meet the requirements above yet.";ap.focus();return}
+ let label=submitBtn.textContent;submitBtn.disabled=true;submitBtn.textContent=signup?"Creating…":"Signing in…";msg.textContent="";
+ if(signup){let {error}=await sb.auth.signUp({email,password:ap.value,options:{data:{full_name:an.value.trim()},emailRedirectTo:location.href}});msg.textContent=error?friendly(error.message):"Account created. Check your email to confirm it, then come back and sign in."}
+ else{let {error}=await sb.auth.signInWithPassword({email,password:ap.value});msg.textContent=error?friendly(error.message):"Signed in.";if(!error)closeModal()}
+ submitBtn.textContent=label;submitBtn.disabled=false};
+reset.onclick=async()=>{let email=ae.value.trim();
+ if(!email){msg.textContent="Enter your email address above first, then tap reset.";ae.focus();return}
+ reset.disabled=true;msg.textContent="Sending reset link…";
+ let {error}=await sb.auth.resetPasswordForEmail(email,{redirectTo:location.href});
+ msg.textContent=error?friendly(error.message):"If that email has an account, a reset link is on its way. Check your inbox.";
+ reset.disabled=false};
+outBtn.onclick=()=>sb.auth.signOut();
 async function auth(){let {data:{user}}=await sb.auth.getUser();u=user||null;app.style.display=u?"block":"none";openBtn.style.display=u?"none":"inline-block";outBtn.style.display=u?"inline-block":"none";who.textContent=u?"Signed in as "+u.email:"Sign in to begin.";if(u)load()}sb.auth.onAuthStateChange(()=>setTimeout(auth,0));auth();
 consultBtn.onclick=async()=>{cm.textContent="Submitting…";let {error}=await sb.from("consultation_requests").insert({user_id:u.id,difficulty:dif.value,improvements:imp.value,help_requested:hlp.value});cm.textContent=error?error.message:"Submitted for review ✓"}
 </script></body></html>
