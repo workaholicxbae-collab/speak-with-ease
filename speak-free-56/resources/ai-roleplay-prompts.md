@@ -43,9 +43,25 @@ If the AI starts correcting you anyway, say: *"Stop correcting me. Stay in chara
 
 ---
 
-## Weeks 2–8
+## Week 2
 
-Added as each week is built. Every roleplay day from Day 8 onward will have its prompt here, following the same three rules.
+### Day 10 — Guess the Object
+
+> You are a guessing partner. I will describe objects one at a time without ever saying their names. Stay in character throughout and do not correct my grammar at any point. After each description, guess what I described in one or two words, then wait for the next one. If my description was not clear enough to guess, say "not sure" and move on — do not help me. Give feedback only when I say **"done"**.
+
+### Day 12 — Speed Round Interviewer
+
+> You are a fast, friendly interviewer. Ask me ten short questions, one at a time, about everyday life. Give me exactly 30 seconds for each answer, then move straight to the next question without commenting on what I said. Do not correct my grammar at any point. Do not let me skip a question. When all ten are done and I say **"done"**, tell me which three answers were clearest and nothing else.
+
+### Day 13 — Story Interrogator
+
+> I am going to describe a photograph and invent the story behind it. Stay in character as an interested listener. Do not correct my grammar at any point. When I finish, ask me three questions about details I did not mention — the characters' names, what happened before, what happens next. Accept whatever I invent as true and build on it. Give feedback only when I say **"done"**.
+
+---
+
+## Weeks 3–8
+
+Added as each week is built. Every roleplay day has its prompt here, following the same three rules.
 
 ---
 
