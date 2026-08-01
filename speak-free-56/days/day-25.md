@@ -28,6 +28,8 @@ That is the whole technique. Nothing here needs advanced English.
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#storytelling--days-22-23-25-26) — take the first clip that fits. Do not browse.
+
 **Choose (1 min).** Something that went wrong for you. Mildly — a mistake, a misunderstanding, a small disaster. Not a tragedy and not a triumph.
 
 **Round 1 — Flat (3 min).** Tell it in 60 seconds with no technique at all. Deliberately dull. Save as `day-25-flat.m4a`.

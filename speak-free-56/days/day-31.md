@@ -24,6 +24,8 @@ Steelmanning is not politeness. It is precision. And in English, it is unusually
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#opinions-and-disagreement--days-2934) — take the first clip that fits. Do not browse.
+
 **Choose (2 min).** One position you genuinely disagree with. From [../resources/prompt-bank.md](../resources/prompt-bank.md), any `hard` prompt works. Real disagreement matters — a topic you are neutral on teaches nothing.
 
 **Round 1 — The weak version (3 min).** Deliberately argue the other side *badly* for 60 seconds. Make it thin and easy to dismiss.

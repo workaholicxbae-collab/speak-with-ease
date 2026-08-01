@@ -26,7 +26,7 @@ The fluency you feel today is borrowed. That is fine. Borrowed fluency is how ev
 
 ## Today's work (14 min)
 
-**Find your clip (2 min).** Any 2-minute stretch of clear conversational English — podcast, interview, video. Two conditions: one person talking, and you understand it without subtitles. **Not a news reader** — that rhythm is artificial and teaches the wrong thing.
+**Find your clip (2 min).** Any 2-minute stretch of [clear conversational English](../resources/video-library.md#shadowing--days-2-24) — podcast, interview, video. Two conditions: one person talking, and you understand it without subtitles. **Not a news reader** — that rhythm is artificial and teaches the wrong thing.
 
 **Pass 1 — Listen (2 min).** Play it once, silently. Notice where they pause and which words they stress.
 

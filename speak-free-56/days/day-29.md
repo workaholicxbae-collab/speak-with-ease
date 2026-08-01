@@ -24,6 +24,8 @@ Frames are not softeners. They are calibration.
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#opinions-and-disagreement--days-2934) — take the first clip that fits. Do not browse.
+
 **The ten frames (2 min).** Read aloud once:
 
 | Strength | Frame |

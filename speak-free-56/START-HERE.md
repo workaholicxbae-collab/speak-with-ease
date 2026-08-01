@@ -68,6 +68,12 @@ These four lines govern all fifty-six days.
 
 ---
 
+## Where to find clips
+
+Twenty of the fifty-six days ask you to listen to something. [resources/video-library.md](resources/video-library.md) has channels and search links for each of them.
+
+It gives you searches rather than fixed videos on purpose: videos get deleted, and several days want new material every time you repeat them.
+
 ## Optional: an AI voice partner
 
 Some days offer a roleplay. Any AI with a voice mode works. Paste-ready prompts live in [resources/ai-roleplay-prompts.md](resources/ai-roleplay-prompts.md).

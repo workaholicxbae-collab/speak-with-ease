@@ -24,6 +24,8 @@ Take the eight below and stop composing.
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#everyday-conversation--days-15-16-17-20) — take the first clip that fits. Do not browse.
+
 **The eight openers (2 min).** Read these aloud once:
 
 1. *How's your day going?*

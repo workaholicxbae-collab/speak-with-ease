@@ -26,6 +26,8 @@ Voicing the other role makes you produce the awkward turns yourself — and once
 
 ## Today's work (14 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#phone-and-transactional-english--days-16-18) — take the first clip that fits. Do not browse.
+
 Run three scenes. In each, **speak both parts aloud**, switching clearly — turn your head, or change your voice.
 
 **Scene 1 — Café (4 min).** You order. They are out of what you want. You choose something else and ask a question about it. Record. Save as `day-16-cafe.m4a`.

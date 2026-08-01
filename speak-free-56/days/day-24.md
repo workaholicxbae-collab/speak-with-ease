@@ -26,6 +26,8 @@ The mistake is treating the long version as the real one. In practice, the thirt
 
 ## Today's work (14 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#shadowing--days-2-24) — take the first clip that fits. Do not browse.
+
 Use **any story** from Day 22 or 23.
 
 **Version A — 3 minutes (5 min).** Full telling. Spine, detail, and what you make of it now. Save as `day-24-long.m4a`.

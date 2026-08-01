@@ -39,7 +39,7 @@ You need a mirror or a phone camera. Use the first ninety seconds of your talk t
 
 **Round 4 — Video (4 min).** Record ninety seconds on video, saved beside `day-53-voice.m4a`.
 
-Watch it **on mute first.** Muting removes the English and shows only what a listener sees before you have said anything.
+Watch it **[on mute first](../resources/video-library.md#delivery-pausing-and-stage-presence--days-51-52-53).** Muting removes the English and shows only what a listener sees before you have said anything.
 
 ## Interactive layer
 

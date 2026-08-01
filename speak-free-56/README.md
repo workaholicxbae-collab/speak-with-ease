@@ -62,7 +62,7 @@ speak-free-56/
 ├── CURRICULUM.md          the whole 8 weeks on one page
 ├── weeks/                 what each week is for
 ├── days/                  the 56 daily sessions
-├── resources/             phrase bank, prompts, rubric, recovery kit
+├── resources/             phrase bank, prompts, rubric, recovery kit, video library
 ├── trackers/              your progress and recordings
 └── FAQ.md                 when it goes wrong
 ```

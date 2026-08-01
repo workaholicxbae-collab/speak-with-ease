@@ -29,6 +29,8 @@ That last one is the most useful and the least used. It hands the turn back, buy
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#meetings-and-professional-english--days-36-39-40-41) — take the first clip that fits. Do not browse.
+
 **Drill (3 min).** Say all four endings aloud, five times each. Twenty repetitions.
 
 **Round 1 — Impossible questions (5 min).** Record yourself answering eight questions you genuinely cannot answer. Invent them about your work, or use these:

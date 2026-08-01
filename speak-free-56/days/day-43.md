@@ -27,6 +27,8 @@ Choose one and start. The frame generates the next sentence for you, which means
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#impromptu-and-pressure--days-4348) — take the first clip that fits. Do not browse.
+
 **Round 1 — Fifteen seconds (4 min).** Take a `medium` prompt from [../resources/prompt-bank.md](../resources/prompt-bank.md) without reading it first.
 
 Read it. Start a 15-second timer. Pick a frame — nothing else. Then speak for two minutes, recorded. Save as `day-43-impromptu-1.m4a`.

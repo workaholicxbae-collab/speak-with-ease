@@ -32,6 +32,8 @@ The second is the strongest sentence in this entire program. Saying "two things"
 
 ## Today's work (14 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#impromptu-and-pressure--days-4348) — take the first clip that fits. Do not browse.
+
 **Choose a topic (1 min).** Something you know — your work, your city, your field. You will be attacked on it for ten questions.
 
 **The gauntlet (10 min).** Ten hard follow-up questions, one at a time, recorded continuously. Each question must build on your previous answer.

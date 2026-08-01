@@ -26,6 +26,8 @@ None of these require better English. They are all about what you do with the En
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#delivery-pausing-and-stage-presence--days-51-52-53) — take the first clip that fits. Do not browse.
+
 Use the **first sixty seconds** of your talk — hook and claim — for all three takes.
 
 **Take 1 — Baseline (2 min).** Deliver it normally, no technique. Save as `day-52-baseline.m4a`.

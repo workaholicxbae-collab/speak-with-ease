@@ -147,6 +147,7 @@ Days 7, 14, 21, 28, 35, 42, 49 and 56 are deliberately light. They are reflectio
 - **[resources/rubric.md](resources/rubric.md)** — five dimensions: Flow, Hesitation, Clarity, Expression, Recovery. Every day scores exactly three of them, never all five. Scoring everything means noticing nothing.
 - **[resources/prompt-bank.md](resources/prompt-bank.md)** — 200 prompts tagged `easy`, `medium`, `hard`. Days point you at a tag, not a fixed prompt, so you can re-run any day with fresh material.
 - **[trackers/progress-tracker.md](trackers/progress-tracker.md)** — one row per day. Hesitation score 1–10 and one line of note. Two minutes total.
+- **[resources/video-library.md](resources/video-library.md)** — what to watch on the twenty days that need something to listen to. Channels plus search links, not fixed clips, because fixed clips rot and you are meant to re-run days with fresh material.
 - **[trackers/recording-log.md](trackers/recording-log.md)** — where each file lives. Without this, the Day 56 comparison does not happen.
 
 ## The four replay points

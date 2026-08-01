@@ -26,6 +26,8 @@ That third one is the piece people forget, and it is why their calls feel awkwar
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#phone-and-transactional-english--days-16-18) — take the first clip that fits. Do not browse.
+
 **Sit on your hands for all three scenes.** Physically. It matters more than it sounds.
 
 **Call 1 — Appointment (4 min).** You call to reschedule. Give your name, your reason, your preferred time. They offer something worse. You negotiate and confirm the details back. Both roles, recorded. Save as `day-18-call-1.m4a`.

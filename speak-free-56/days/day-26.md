@@ -16,7 +16,7 @@ Today you go back to your Day 23 childhood story and add what makes people pictu
 
 ## The concept (2 min)
 
-Five senses, and you use one.
+[Five senses](../resources/video-library.md#storytelling--days-22-23-25-26), and you use one.
 
 Almost every learner describes only what things **looked** like. Sound, smell, texture and taste are sitting unused — and smell in particular is the one that makes a listener feel they were there.
 

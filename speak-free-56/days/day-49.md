@@ -26,6 +26,8 @@ Compare across conditions, not just across numbers.
 
 ## Today's work (6 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#fillers-and-hesitation--days-4-22-49) — take the first clip that fits. Do not browse.
+
 **Set up (1 min).** Take a `hard` prompt from [../resources/prompt-bank.md](../resources/prompt-bank.md). Do not read it yet.
 
 **The recording (2 min).** Read the prompt. **Five seconds** of preparation. Then speak for exactly two minutes.

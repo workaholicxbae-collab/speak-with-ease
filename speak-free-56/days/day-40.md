@@ -30,6 +30,8 @@ The Blocked section is the one people skip, and it is the only part that require
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#meetings-and-professional-english--days-36-39-40-41) — take the first clip that fits. Do not browse.
+
 **Round 1 — Cold (3 min).** Give a 60-second update on your actual current work. No preparation, no notes. Save as `day-40-cold.m4a`.
 
 **Listen (2 min).** Count how many seconds passed before you said anything concrete. Most people burn fifteen on warm-up phrases.

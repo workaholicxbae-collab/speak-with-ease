@@ -30,6 +30,8 @@ Notice what is absent: any apology for having a view. "Sorry" belongs to things 
 
 ## Today's work (14 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#opinions-and-disagreement--days-2934) — take the first clip that fits. Do not browse.
+
 Four scenes. Both roles, recorded. Use the three-move pattern every time.
 
 **Scene 1 — A friend (3 min).** They suggest a plan you do not want. Push back and propose something else. Save as `day-32-friend.m4a`.

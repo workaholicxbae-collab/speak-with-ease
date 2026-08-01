@@ -27,6 +27,8 @@ Summarising is the most undervalued. It requires no opinion and no new informati
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#meetings-and-professional-english--days-36-39-40-41) — take the first clip that fits. Do not browse.
+
 **Drill (5 min).** Say each of the eight phrases **five times aloud**. Forty repetitions.
 
 Vary the delivery — urgent, relaxed, quiet. In a real meeting you will need the relaxed version, and it is the hardest to produce under pressure.

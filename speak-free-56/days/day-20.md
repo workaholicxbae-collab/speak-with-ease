@@ -24,6 +24,8 @@ Native speakers produce them constantly and unconsciously — "oh really", "god"
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#everyday-conversation--days-15-16-17-20) — take the first clip that fits. Do not browse.
+
 **The bank (2 min).** Say each five times aloud:
 
 | Situation | Reaction |
