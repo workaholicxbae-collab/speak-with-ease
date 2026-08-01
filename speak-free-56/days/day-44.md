@@ -24,6 +24,8 @@ This is why the last topic is usually the best one. Not because you warmed up, b
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#impromptu-and-pressure--days-4348) — take the first clip that fits. Do not browse.
+
 **Prepare (1 min).** Take **five** prompts from [../resources/prompt-bank.md](../resources/prompt-bank.md) — mix `medium` and `hard`. Write the numbers only. Do not read them.
 
 **The run (10 min).** Press record once and leave it running for all five.

@@ -16,7 +16,7 @@ This story comes back on Day 26 and again on Day 28. Choose one you do not mind 
 
 ## The concept (2 min)
 
-Old memories are stored as fragments — an image, a feeling, a single line someone said. They are not stored as narratives.
+[Old memories](../resources/video-library.md#storytelling--days-22-23-25-26) are stored as fragments — an image, a feeling, a single line someone said. They are not stored as narratives.
 
 So telling one is not recall. It is *construction*: you take four or five fragments and build a sequence that holds them.
 

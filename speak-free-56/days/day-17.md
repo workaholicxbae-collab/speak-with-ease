@@ -26,6 +26,8 @@ A conversation only dies when both people stop extracting.
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#everyday-conversation--days-15-16-17-20) — take the first clip that fits. Do not browse.
+
 **Warm chain (3 min).** Take a statement — *"I moved house last year"* — and ask **five** follow-ups aloud. Do not answer them. Just generate.
 
 **Chain 1 (4 min).** Pick any `medium` prompt from [../resources/prompt-bank.md](../resources/prompt-bank.md). Play both roles, recording:

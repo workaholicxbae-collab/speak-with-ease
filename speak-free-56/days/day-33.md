@@ -26,6 +26,8 @@ Only the third is available today. Narrowing your position under a good objectio
 
 ## Today's work (14 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#opinions-and-disagreement--days-2934) — take the first clip that fits. Do not browse.
+
 **Choose your position (1 min).** Something you actually believe. Any `medium` or `hard` prompt from [../resources/prompt-bank.md](../resources/prompt-bank.md).
 
 **Set up (1 min).** Choose one:

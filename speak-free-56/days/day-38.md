@@ -31,6 +31,8 @@ The word "I" belongs in Action. "We" in that section is where good answers go to
 
 ## Today's work (14 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#interviews--days-37-38-42) — take the first clip that fits. Do not browse.
+
 **Map one story (3 min).** Take a real work situation. Say the four parts aloud, one sentence each except Action. Do not record yet.
 
 **Round 1 — Five questions (8 min).** Record all five in one file. Sixty to ninety seconds each, STAR every time:

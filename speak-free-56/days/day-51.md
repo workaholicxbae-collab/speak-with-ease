@@ -30,6 +30,8 @@ Returning to the hook at the close is the cheapest technique in public speaking 
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#delivery-pausing-and-stage-presence--days-51-52-53) — take the first clip that fits. Do not browse.
+
 **Build the hook (4 min).** Try three different openings aloud, 30 seconds each:
 
 - A question to the audience

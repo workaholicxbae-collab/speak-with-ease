@@ -28,6 +28,8 @@ The most common error is using the ninety in a ten-second situation. It reads as
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#interviews--days-37-38-42) — take the first clip that fits. Do not browse.
+
 **Build the ten (3 min).** Write nothing. Say it aloud six times, adjusting each time until it fits in ten seconds and sounds like speech.
 
 Record the final version. Save as `day-37-ten.m4a`.

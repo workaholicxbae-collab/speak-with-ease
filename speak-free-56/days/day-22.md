@@ -30,6 +30,8 @@ The spine is not a template for children's stories. It is how a work update, a c
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#storytelling--days-22-23-25-26) — take the first clip that fits. Do not browse.
+
 **Fit an existing story (3 min).** Take any film you know well. Say its five spine lines aloud, one sentence each. Fifteen seconds total.
 
 **Round 1 — Your story, bare spine (3 min).** Pick something real that happened to you in the last year. Say only the five lines. No detail. Record. Save as `day-22-spine.m4a`.

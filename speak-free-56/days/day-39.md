@@ -26,6 +26,8 @@ Purpose-first is the strongest of the three, and the one almost nobody uses. Peo
 
 ## Today's work (13 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#meetings-and-professional-english--days-36-39-40-41) — take the first clip that fits. Do not browse.
+
 **List your jargon (2 min).** Say your job out loud for 30 seconds. Every technical word you use, write it down. Most people produce six to twelve.
 
 **Round 1 — Ninety seconds, no jargon (4 min).** Explain your job to a twelve-year-old. Ninety seconds. **None** of your listed words. Save as `day-39-simple-1.m4a`.

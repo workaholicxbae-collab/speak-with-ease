@@ -26,6 +26,8 @@ Today is not about learning anything new. It is about reaching for the right too
 
 ## Today's work (6 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#interviews--days-37-38-42) — take the first clip that fits. Do not browse.
+
 **Set up (1 min).** Record continuously through all five questions. **No stopping between them.** Read each question aloud, then answer.
 
 **The five questions (5 min).** Roughly 60 seconds each:

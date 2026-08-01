@@ -24,6 +24,8 @@ Sports commentators are not more fluent than other people. They have simply prac
 
 ## Today's work (14 min)
 
+**Something to listen to:** [video library](../resources/video-library.md#muted-video-for-narration--day-11) — take the first clip that fits. Do not browse.
+
 **Find a video (2 min).** Three minutes long, with people doing things — cooking, a street scene, a match, a repair. **Mute it.** Subtitles off.
 
 Nothing with fast cuts. A slow, continuous scene is far better for a first attempt.

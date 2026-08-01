@@ -20,7 +20,7 @@ There are two kinds of gap.
 
 **The thinking pause** — you stop, the room is quiet, you choose your next word, you continue. Listeners read this as competence.
 
-**The searching noise** — "ummm", "aaah", "you know", "how to say". Same gap, filled with sound. Listeners read this as struggle.
+**The [searching noise](../resources/video-library.md#fillers-and-hesitation--days-4-22-49)** — "ummm", "aaah", "you know", "how to say". Same gap, filled with sound. Listeners read this as struggle.
 
 You are not removing the pause. You could not if you wanted to; thinking takes time. You are removing the *sound* you make during it.
 
